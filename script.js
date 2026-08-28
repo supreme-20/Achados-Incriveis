@@ -3,30 +3,40 @@ console.log(produtos);
 
 const productsGrid = document.querySelector(".products-grid");
 
-    produtos.forEach(function(produto) {
+function calcularDesconto(precoAntigo, preco) {
+    const desconto = ((precoAntigo - preco) / precoAntigo) * 100;
 
-        const card = document.createElement("article");
+    return Math.round(desconto);
+}
 
-    card.classList.add("product-card");
+produtos.forEach(function(produto) {
 
-    card.innerHTML = `
-        <div class="product-image">
-            <img src="${produto.imagem}" alt="${produto.nome}">
-        </div>
+    const desconto = calcularDesconto(
+        produto.precoAntigo, 
+        produto.precoAntigo
+    );
+    const card = document.createElement("article");
 
-        <div class="product-info">
-            <h3>${produto.nome}</h3>
+card.classList.add("product-card");
 
-            <p class="old-price">DE R$ ${produto.precoAntigo}</p>
+card.innerHTML = `
+    <div class="product-image">
+        <img src="${produto.imagem}" alt="${produto.nome}">
+    </div>
 
-            <p class="price">R$ ${produto.preco}</p>
+    <div class="product-info">
+        <h3>${produto.nome}</h3>
 
-            <a href="${produto.link}" class="product-button">
-                VER OFERTA
-            </a>
-        </div>
-    `;
+        <p class="old-price">DE R$ ${produto.precoAntigo}</p>
 
-    productsGrid.appendChild(card);
+        <p class="price">R$ ${produto.preco}</p>
+
+        <a href="${produto.link}" class="product-button">
+            VER OFERTA
+        </a>
+    </div>
+`;
+
+productsGrid.appendChild(card);
 
 });
