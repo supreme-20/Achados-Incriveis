@@ -1,6 +1,3 @@
-console.log("script funcionando");
-console.log(produtos);
-
 const productsGrid = document.querySelector(".products-grid");
 
 function calcularDesconto(precoAntigo, preco) {
@@ -9,34 +6,93 @@ function calcularDesconto(precoAntigo, preco) {
     return Math.round(desconto);
 }
 
+function formatarPreco(preco) {
+    return preco.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+}
+
 produtos.forEach(function(produto) {
 
-    const desconto = calcularDesconto(
-        produto.precoAntigo, 
-        produto.precoAntigo
-    );
     const card = document.createElement("article");
 
-card.classList.add("product-card");
+    card.classList.add("product-card");
 
-card.innerHTML = `
-    <div class="product-image">
-        <img src="${produto.imagem}" alt="${produto.nome}">
-    </div>
+    let informacaoPreco = "";
 
-    <div class="product-info">
-        <h3>${produto.nome}</h3>
+    if (produto.precoAntigo) {
 
-        <p class="old-price">DE R$ ${produto.precoAntigo}</p>
+        const desconto = calcularDesconto(
+            produto.precoAntigo,
+            produto.preco
+        );
 
-        <p class="price">R$ ${produto.preco}</p>
+        informacaoPreco = `
+            <p class="old-price">
+                DE ${formatarPreco(produto.precoAntigo)}
+            </p>
 
-        <a href="${produto.link}" class="product-button">
-            VER OFERTA
-        </a>
-    </div>
-`;
+            <p class="price">
+                ${formatarPreco(produto.preco)}
+            </p>
 
-productsGrid.appendChild(card);
+            <span class="discount">
+                ${desconto}% OFF
+            </span>
+        `;
+
+    } else {
+
+        informacaoPreco = `
+            <p class="price">
+                ${formatarPreco(produto.preco)}
+            </p>
+
+            ${produto.precoNormal ? `
+                <p class="normal-price">
+                    ${formatarPreco(produto.precoNormal)} em outras formas de pagamento
+                </p>
+            ` : ""}
+        `;
+    }
+
+    card.innerHTML = `
+        <div class="product-image">
+            <img src="${produto.imagem}" alt="${produto.nome}">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-category">
+                ${produto.categoria}
+            </span>
+
+            <h3>${produto.nome}</h3>
+
+            ${informacaoPreco}
+
+            ${produto.cupom ? `
+                <p class="coupon">
+                    CUPOM: ${produto.cupom}
+                </p>
+            ` : ""}
+
+            ${produto.parcelamento ? `
+                <p class="installment">
+                    ${produto.parcelamento}
+                </p>
+            ` : ""}
+
+            ${produto.link ? `
+                <a href="${produto.link}" class="product-button">
+                    VER OFERTA
+                </a>
+            ` : ""}
+
+        </div>
+    `;
+
+    productsGrid.appendChild(card);
 
 });
