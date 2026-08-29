@@ -81,5 +81,53 @@ const produtos = [
         cupom: null,
         parcelamento: "4x R$ 6,03",
         link: "https://s.shopee.com.br/3g2oGQhgi7"
-    }
+    },
+
+    {
+    nome: "Brinquedo para Gato",
+    categoria: "Pets",
+    imagem: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m9g0umlzvvaxda@resize_w450_nl.webp",
+    preco: 27.71,
+    precoNormal: null,
+    precoAntigo: null,
+    cupom: null,
+    parcelamento: "5x R$ 6,15",
+    link: "https://s.shopee.com.br/4Az4ruABW6"
+},
+
+{
+    nome: "Parafusadeira Furadeira Elétrica 26V/68V com 2 Baterias, Maleta e Acessórios",
+    categoria: "Ferramentas",
+    imagem: "https://down-br.img.susercontent.com/file/cn-11134207-820l4-mos0wkjf4f0i2c@resize_w450_nl.webp",
+    preco: 131.10,
+    precoNormal: null,
+    precoAntigo: null,
+    cupom: null,
+    parcelamento: "12x R$ 13,39",
+    link: "https://s.shopee.com.br/7fYyI10SNG"
+},
+
+{
+    nome: "Kit 3 Calças Femininas Plus Size Jogger, Pantalona e Jeans Cós Alto",
+    categoria: "Moda",
+    imagem: "https://down-br.img.susercontent.com/file/br-11134207-820l8-mp46fozawdttda@resize_w450_nl.webp",
+    preco: 85.41,
+    precoNormal: 89.90,
+    precoAntigo: null,
+    cupom: null,
+    parcelamento: "12x R$ 8,72",
+    link: "https://s.shopee.com.br/9ANo8TCxMC"
+},
+
+{
+    nome: "Climatizador Ventisol CLI0601 6 Litros 60W",
+    categoria: "Casa e Decoração",
+    imagem: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mj06c2m8m58j9d@resize_w450_nl.webp",
+    preco: 237.40,
+    precoNormal: 263.05,
+    precoAntigo: null,
+    cupom: "com cupom",
+    parcelamento: "12x R$ 24,25",
+    link: "https://s.shopee.com.br/8pkxknyurY"
+},
 ];
