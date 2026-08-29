@@ -33,5 +33,53 @@ const produtos = [
         cupom: null,
         parcelamento: null,
         link: "https://s.shopee.com.br/6fgm2qkP4q"
+    },
+
+    {
+        nome: "Mãozinha Realista Mão O Coisa Borracha Decoração Halloween",
+        categoria: "Casa e Decoração",
+        imagem: "https://down-br.img.susercontent.com/file/sg-11134201-7rd69-m6ogady7on179d@resize_w450_nl.webp",
+        preco: 25.70,
+        precoNormal: null,
+        precoAntigo: null,
+        cupom: null,
+        parcelamento: "5x R$ 5,71",
+        link: "https://s.shopee.com.br/3g2jZ7Zqu9"
+    },
+
+    {
+        nome: "Relógio Despertador de Mesa Parede Retrô Revólver / Moto Pronta Entrega Envio Rápido",
+        categoria: "Casa e Decoração",
+        imagem: "https://down-br.img.susercontent.com/file/br-11134201-820li-mqxapagbnu9x3d@resize_w450_nl.webp",
+        preco: 39.99,
+        precoNormal: null,
+        precoAntigo: null,
+        cupom: null,
+        parcelamento: "7x R$ 6,41",
+        link: "https://s.shopee.com.br/AAG9jqhCim"
+    },
+
+    {
+        nome: "Crianças Trem Conjunto Cobra Comer Blocos Automotivo Deslizante Jogo Rastejando Brinquedos Para Meninos Menina Joven",
+        categoria: "Brinquedos",
+        imagem: "https://down-br.img.susercontent.com/file/sg-11134201-825as-mqwzu85uusxxd9@resize_w450_nl.webp",
+        preco: 140.60,
+        precoNormal: null,
+        precoAntigo: null,
+        cupom: null,
+        parcelamento: "12x R$ 14,36",
+        link: "https://s.shopee.com.br/6VMrNj1foT"
+    },
+
+    {
+        nome: "Dispensador Automático de Palitos de Dente Forma de Pássaro, Porta Palitos Criativo para Mesa",
+        categoria: "Casa e Decoração",
+        imagem: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mrcf8apkm61126_tn",
+        preco: 21.90,
+        precoNormal: null,
+        precoAntigo: 39.90,
+        cupom: null,
+        parcelamento: "4x R$ 6,03",
+        link: "https://s.shopee.com.br/3g2oGQhgi7"
     }
 ];

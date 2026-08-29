@@ -140,6 +140,9 @@ body {
     background: #111c2e;
     border: 1px solid #1e2c42;
     border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .product-image {
@@ -156,12 +159,16 @@ body {
 
 .product-info {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .product-info h3 {
     margin-bottom: 14px;
     font-size: 17px;
     line-height: 1.4;
+
 }
 
 .old-price {
@@ -175,22 +182,23 @@ body {
     font-size: 27px;
     font-weight: 800;
     color: #f8fafc;
+    display: flex;
+    gap: 20px;
 }
 
 .discount {
-    display: inline-block;
-    margin-top: 8px;
     padding: 4px 8px;
     border-radius: 5px;
     background: #166534;
     color: #bbf7d0;
     font-size: 12px;
     font-weight: 700;
+    margin: 10px 0px;
 }
 
 .product-button {
     display: block;
-    margin-top: 18px;
+    margin-top: auto;
     padding: 12px;
     border-radius: 8px;
     background: #1677ff;
@@ -199,7 +207,6 @@ body {
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
-
 }
 
 .product-button:hover {
@@ -254,7 +261,57 @@ body {
 }
 
 .normal-price {
-    margin-top: 4px;
+    margin-top: 10px;
     color: #94a3b8;
     font-size: 13px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 40px 0;
+    background: #080e19;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-brand p {
+    margin-top: 8px;
+    max-width: 400px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-info {
+    text-align: right;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-info {
+        text-align: left;
+    }
+
+}
+
+.installment {
+    margin-top: 2px;
+    color: #f8fafc;
+    font-size: 14px;
 }
