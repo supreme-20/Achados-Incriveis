@@ -96,3 +96,43 @@ produtos.forEach(function(produto) {
     productsGrid.appendChild(card);
 
 });
+
+const perfumesGrid = document.querySelector(".perfumes-grid");
+
+perfumes.forEach(function(perfume) {
+
+    const card = document.createElement("article");
+
+    card.classList.add("product-card");
+
+    card.innerHTML = `
+        <div class="product-image">
+            <img src="${perfume.imagem}" alt="${perfume.nome}">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-category">
+                ${perfume.tipo}
+            </span>
+
+            <h3>${perfume.nome}</h3>
+
+            <p class="normal-price">
+                ${perfume.quantidade}
+            </p>
+
+            <p class="price">
+                ${formatarPreco(perfume.preco)}
+            </p>
+
+            <a href="${perfume.link}" class="product-button">
+                VER PRODUTO
+            </a>
+
+        </div>
+    `;
+
+    perfumesGrid.appendChild(card);
+
+});
