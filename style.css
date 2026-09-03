@@ -213,11 +213,22 @@ body {
     background: #0f63d8;
 }
 
+.perfumes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 /* TABLET */
 
 @media (max-width: 768px) {
 
     .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-grid,
+    .perfumes-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -237,6 +248,11 @@ body {
 
     .hero-text {
         font-size: 15px;
+    }
+
+    .products-grid,
+    .perfumes-grid {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -315,3 +331,4 @@ body {
     color: #f8fafc;
     font-size: 14px;
 }
+
